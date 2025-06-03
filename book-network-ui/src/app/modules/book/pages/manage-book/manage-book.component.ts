@@ -4,9 +4,10 @@ import {BookService} from '../../../../services/services/book.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
-  selector: 'app-manage-book',
-  templateUrl: './manage-book.component.html',
-  styleUrls: ['./manage-book.component.scss']
+    selector: 'app-manage-book',
+    templateUrl: './manage-book.component.html',
+    styleUrls: ['./manage-book.component.scss'],
+    standalone: false
 })
 export class ManageBookComponent implements OnInit {
 

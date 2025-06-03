@@ -1,4 +1,4 @@
-import {APP_INITIALIZER, NgModule} from '@angular/core';
+import { NgModule, inject, provideAppInitializer } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,12 +32,10 @@ export function kcFactory(kcService: KeycloakService) {
             useClass: HttpTokenInterceptor,
             multi: true
         },
-        {
-            provide: APP_INITIALIZER,
-            deps: [KeycloakService],
-            useFactory: kcFactory,
-            multi: true
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (kcFactory)(inject(KeycloakService));
+        return initializerFn();
+      }),
         provideHttpClient(withInterceptorsFromDi())
     ] })
 export class AppModule { }

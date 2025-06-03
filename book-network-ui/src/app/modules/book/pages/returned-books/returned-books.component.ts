@@ -4,9 +4,10 @@ import {BookService} from '../../../../services/services/book.service';
 import {BorrowedBookResponse} from '../../../../services/models/borrowed-book-response';
 
 @Component({
-  selector: 'app-returned-books',
-  templateUrl: './returned-books.component.html',
-  styleUrls: ['./returned-books.component.scss']
+    selector: 'app-returned-books',
+    templateUrl: './returned-books.component.html',
+    styleUrls: ['./returned-books.component.scss'],
+    standalone: false
 })
 export class ReturnedBooksComponent implements OnInit {
 

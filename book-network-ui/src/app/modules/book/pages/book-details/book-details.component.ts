@@ -6,9 +6,10 @@ import {FeedbackService} from '../../../../services/services/feedback.service';
 import {PageResponseFeedbackResponse} from '../../../../services/models/page-response-feedback-response';
 
 @Component({
-  selector: 'app-book-details',
-  templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.scss']
+    selector: 'app-book-details',
+    templateUrl: './book-details.component.html',
+    styleUrls: ['./book-details.component.scss'],
+    standalone: false
 })
 export class BookDetailsComponent implements OnInit {
   book: BookResponse = {};

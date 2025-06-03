@@ -3,9 +3,10 @@ import {AuthenticationRequest} from '../../services/models/authentication-reques
 import {KeycloakService} from '../../services/keycloak/keycloak.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    standalone: false
 })
 export class LoginComponent implements OnInit {
 

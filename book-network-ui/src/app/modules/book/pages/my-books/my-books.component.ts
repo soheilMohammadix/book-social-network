@@ -5,9 +5,10 @@ import {BookResponse} from '../../../../services/models/book-response';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-my-books',
-  templateUrl: './my-books.component.html',
-  styleUrls: ['./my-books.component.scss']
+    selector: 'app-my-books',
+    templateUrl: './my-books.component.html',
+    styleUrls: ['./my-books.component.scss'],
+    standalone: false
 })
 export class MyBooksComponent implements OnInit {
 
